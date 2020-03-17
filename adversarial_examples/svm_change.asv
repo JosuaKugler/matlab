@@ -1,0 +1,11 @@
+function image = svm_change(X, x, y, alphas, dimension, n)
+Influencepixels = X'*alphas';
+[~,idx] = sort(abs(Influencepixels));
+idx = idx(1:n);
+for i = 1:size(idx)
+    if y == 1
+        if Influencepixels(idx) > 0:
+            x(idx = 0)
+end
+
+end

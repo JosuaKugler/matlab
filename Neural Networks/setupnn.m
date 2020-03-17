@@ -1,0 +1,14 @@
+load lin_unsep_data.mat;
+xdouble = double(X);
+ydouble = double(Y);
+nn = nnsetup([2 100 1]);
+nn.learningRate = 1;
+nn.scaling_learningRate = 1;
+nn.activation_function = 'sigm';
+nn.output = 'softmax';
+nn.momentum = 0.9;
+nn.training_print = 10;
+opts.numepochs = 1000;
+opts.batchsize = 10;
+nn = nntrain(nn, xdouble, ydouble, opts);
+show_nn_pred(nn,X,Y);

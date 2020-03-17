@@ -1,0 +1,12 @@
+function [positive,negative] = InfluentalPixels(weights,n)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+topTen = [];
+
+for i = 1:size(weights)
+    if abs(weights(i)) > 
+
+
+
+end
+
